@@ -8,15 +8,15 @@
  */
 int main(void)
 {
-        int a;
+	int a;
 
-        a = 48;
+	a = 48;
 
-        while (a <= 57)
-        {
-                putchar(a);
-                a++;
-        }
-        putchar('\n');
-        return (0);
+	while (a <= 57)
+	{
+		putchar(a);
+		a++;
+	}
+	putchar('\n');
+	return (0);
 }
