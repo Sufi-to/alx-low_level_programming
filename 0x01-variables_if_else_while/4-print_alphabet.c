@@ -8,21 +8,21 @@
  */
 int main(void)
 {
-	int c;
+	int a;
 
-	c = 97;
+	a = 97;
 
-	while (c <= 122)
+	while (a <= 122)
 	{
-		if (c == 101 || c == 113)
+		if (a == 101 || a == 113)
 		{
-			c++;
+			a++;
 			continue;
 		}
 		else
 		{
-			putchar(c);
-			c++;
+			putchar(a);
+			a++;
 		}
 	}
 	putchar('\n');
