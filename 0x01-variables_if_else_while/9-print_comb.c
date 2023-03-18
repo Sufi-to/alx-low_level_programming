@@ -1,6 +1,7 @@
-#include<stdlib.h>
-#include<stdio.h>
-#include<time.h>
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
  * main - Entry point
  *
@@ -8,24 +9,17 @@
  */
 int main(void)
 {
-	int x;
+	int d;
 
-	x = 48;
-
-	while (x <= 57)
+	for (d = '0'; d <= '9'; d++)
 	{
-		if (x == 57)
+		putchar(d);
+		if (d != '9')
 		{
-			putchar(x);
-			x++;
-			continue;
-		} else
-		{
-			putchar(x);
 			putchar(',');
 			putchar(' ');
 		}
-		x++;
 	}
+	putchar('\n');
 	return (0);
 }
