@@ -1,6 +1,7 @@
 #include "main.h"
 
 /**
+ * print_alphabet_x10 - Check Main
  * Description: function uses _putchar function to print
  * alphabet in lowercase 10 times
  * Return: Nothing.
@@ -11,7 +12,6 @@ void print_alphabet_x10(void)
 	int a;
 
 	a = 97;
-
 	for (i = 0; i < 10; i++)
 	{
 		while (a <= 122)
@@ -22,5 +22,4 @@ void print_alphabet_x10(void)
 		a = 97;
 		_putchar('\n');
 	}
-	
 }
