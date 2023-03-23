@@ -10,7 +10,7 @@ void print_most_numbers(void)
 
 	i = 47;
 
-	while (i <= 57 && (i != 2 || i != 4))
+	while (i <= 57 && (i != 2 && i != 4))
 	{
 		_putchar(i);
 		i++;
