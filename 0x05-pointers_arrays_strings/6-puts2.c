@@ -20,7 +20,7 @@ void puts2(char *str)
 	while (len < i)
 	{
 		_putchar(str[len]);
-		i = i + 2;
+		len = len + 2;
 	}
 	_putchar('\0');
 }
