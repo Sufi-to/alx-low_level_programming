@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stddef.h>
+#include <stdio.h>
 /**
  * _strchr - checks if a character is in a string
  * @s: string to checked if it contains the character
