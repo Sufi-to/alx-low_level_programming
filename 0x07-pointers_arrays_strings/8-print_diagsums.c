@@ -9,6 +9,9 @@ void print_diagsums(int *a, int size)
 {
 	int total1, total2, i;
 
+	total1 = 0;
+	total2 = 0;
+
 	for (i = 0; i < size; i++)
 	{
 		total1 += a[i * size + i];
