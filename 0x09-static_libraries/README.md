@@ -1,1 +1,1 @@
-Creating a static library
+Creating a static library from functions written before
