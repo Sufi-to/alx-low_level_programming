@@ -8,8 +8,6 @@
  */
 int main(int argc, char **argv)
 {
-	int mul, x1, x2;
-
 	if (argc > 3 || argc < 3)
 	{
 		printf("Error\n");
