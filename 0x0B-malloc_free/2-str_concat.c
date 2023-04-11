@@ -17,35 +17,35 @@ char *str_concat(char *s1, char *s2)
 
 	i = 0;
 	j = 0;
-	while (s1[i] && s1)
+
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	while (s1[i] != '\0')
 	{
 		i++;
 	}
-	while (s2[j] && s2)
+	while (s2[j] != '\0')
 	{
 		j++;
 	}
 	ptr = (char *) malloc(sizeof(char) * (i + j + 1));
 	if (ptr == NULL)
+		free(ptr);
 		return (NULL);
 	x = 0;
 	y = 0;
-	if (s1)
+	while (x < i)
 	{
-		while (x < i)
-		{
-			ptr[x] = s1[x];
-			x++;
-		}
+		ptr[x] = s1[x];
+		x++;
 	}
-	if (s2)
+	while (x < (i + j))
 	{
-		while (x < (i + j))
-		{
-			ptr[x] = s2[y];
-			x++;
-			y++;
-		}
+		ptr[x] = s2[y];
+		x++;
+		y++;
 	}
 	ptr[x] = '\0';
 	return (ptr);
