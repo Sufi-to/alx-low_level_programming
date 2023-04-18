@@ -24,7 +24,8 @@ int main(int argc, char *argv[])
 
 	x =  atoi(argv[1]);
 	if (x <= 0)
-		printf("%d\n", 0);
+		printf("0\n");
+		return (0);
 
 	while (x > 0)
 	{
@@ -39,7 +40,7 @@ int main(int argc, char *argv[])
 		else if (x >= 1)
 			x = x - 1;
 
-		i++;
+		i += 1;
 	}
 	printf("%d\n", i);
 	return (0);
