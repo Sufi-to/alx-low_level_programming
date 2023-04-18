@@ -8,7 +8,7 @@
  * Return: 1 if number of arguments is not exactly 2
  *
 */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	int x;
 	int i;
@@ -26,7 +26,7 @@ int main(int argc, char **argv)
 	if (x <= 0)
 		printf("%d\n", 0);
 
-	while (x != 0)
+	while (x > 0)
 	{
 		if (x >= 25)
 			x = x - 25;
@@ -42,4 +42,5 @@ int main(int argc, char **argv)
 		i++;
 	}
 	printf("%d\n", i);
+	return (0);
 }
