@@ -9,7 +9,7 @@
 */
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	unsigned int i;
+	int i;
 	int y;
 
 	y = 0;
