@@ -24,6 +24,12 @@ int main(int argc, char *argv[])
 	}
 	operator = get_op_func(argv[2]);
 
+	if (operator == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+
 	x =  atoi(argv[1]);
 	y = atoi(argv[3]);
 	printf("%d\n", operator(x, y));
