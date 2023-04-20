@@ -1,6 +1,9 @@
 #include "3-calc.h"
 /**
- * main - entry p
+ * main - entry point for our program
+ * @argc: number of arguments
+ * @argv: array of arguments
+ * Return: Nothing
 */
 
 int main(int argc, char *argv[])
