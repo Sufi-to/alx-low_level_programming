@@ -6,20 +6,20 @@
  * @n: number of integers passed to the function
  *
 */
-void print_numbers(const *separator, const unsigned int n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list valist;
+	va_list va;
 	unsigned int i;
 
-	va_start(valist, n);
+	va_start(va, n);
 
 	for (i = 0; i < n; i++)
 	{
-		printf("%d", va_arg(valist, int));
+		printf("%d", va_arg(va, int));
 		if (separator && i < n - 1)
 			printf("%s", separator);
 	}
 
 	printf("\n");
-	va_end(valist);
+	va_end(va);
 }
