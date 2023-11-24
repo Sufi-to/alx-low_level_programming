@@ -24,7 +24,7 @@ unsigned int binary_to_uint(const char *b)
 		}
 	}
 
-	for (p_two = 1, i--; i >=0; i--, p_two *= 2)
+	for (p_two = 1, i--; i >= 0; i--, p_two *= 2)
 	{
 		if (b[i] == '1')
 		{
