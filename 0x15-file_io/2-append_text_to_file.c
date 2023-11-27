@@ -3,7 +3,8 @@
  * append_text_to_file - function that appends text to file
  * @filename: pointer to filename
  * @text_content: pointer to string that will be appended
- * Return: -1 for failure, 1 for success.
+ * Return: -1 for failure, 1 for success and Null if filename
+ * is NULL
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
