@@ -21,6 +21,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	open_int = open(filename, O_RDONLY);
 	read_bts = read(open_int, buffer, letters);
+	buffer[read_bts] = '\0';
 	write_bts = write(1, buffer, read_bts);
 
 	if (open_int == -1 || read_bts == -1 || write_bts == -1 ||
