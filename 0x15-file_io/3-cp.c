@@ -1,7 +1,6 @@
 #include "main.h"
 
 void file_close(int fc);
-
 /**
  * file_close - function to close opened files
  * @fc : file descriptor to be closed
