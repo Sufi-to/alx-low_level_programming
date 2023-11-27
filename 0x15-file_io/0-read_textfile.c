@@ -23,7 +23,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	read_bts = read(open_int, buffer, letters);
 	write_bts = write(1, buffer, read_bts);
 
-	if (open_int < 0 || read_bts < 0 || write_bts < 0 ||
+	if (open_int == -1 || read_bts < -1 || write_bts < -1 ||
 	write_bts != read_bts)
 	{
 		free(buffer);
