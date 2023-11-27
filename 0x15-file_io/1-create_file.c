@@ -14,29 +14,26 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content != NULL)
 	{
-		open_int = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+		open_int = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 		if (open_int < 0)
+		{
+			close(open_int);
+			return (-1);
+		}
+		for (len = 0; text_content[len];)
+		{
+			len++;
+		}
+		write_bts = write(open_int, text_content, len);
+		if (write_bts < 0)
 		{
 			close(open_int);
 			return (-1);
 		}
 		else
 		{
-			for (len = 0; text_content[len];)
-			{
-				len++;
-			}
-			write_bts = write(open_int, text_content, len);
-			if (write_bts < 0)
-			{
-				close(open_int);
-				return (-1);
-			}
-			else
-			{
-				close(open_int);
-				return (1);
-			}
+			close(open_int);
+			return (1);
 		}
 	}
 	return (1);
