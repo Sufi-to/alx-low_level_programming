@@ -1,9 +1,9 @@
 #include "main.h"
 
-void file_close(int fc);
+void file_close(int fd);
 /**
  * file_close - function to close opened files
- * @fc : file descriptor to be closed
+ * @fd : file descriptor to be closed
  * Return: nothing
 */
 void file_close(int fd)
