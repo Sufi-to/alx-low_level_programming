@@ -4,7 +4,8 @@
  * read_textfile - reads a textfile and print to standard output
  * @filename: pointer to file name
  * @letters: number of chars to be read and printed from the file
- * Return: 0 if name  of file is null and number of bytes if sucess
+ * Return: 0 if name  of file is null, if it cannot be read,
+ *  and number of bytes if success
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -32,6 +33,4 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	close(open_int);
 
 	return (write_bts);
-
 }
-
