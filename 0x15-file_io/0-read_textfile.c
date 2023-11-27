@@ -8,7 +8,7 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t o, r, w;
+	int open_int, read_bts, write_bts;
 	char *buffer;
 
 	if (filename == NULL)
@@ -18,19 +18,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buffer == NULL)
 		return (0);
 
-	o = open(filename, O_RDONLY);
-	r = read(o, buffer, letters);
-	w = write(STDOUT_FILENO, buffer, r);
+	open_int = open(filename, O_RDONLY);
+	read_bts = read(open_int, buffer, letters);
+	write_bts = write(1, buffer, read_bts);
 
-	if (o == 1 || r == -1 || w == -1 || w != r)
+	if (open_int < 0 || write_bts == -1 || write_bts != read_bts)
 	{
 		free(buffer);
 		return (0);
 	}
 	free(buffer);
-	close(o);
+	close(open_int);
 
-	return (w);
+	return (write_bts);
 
 }
 
