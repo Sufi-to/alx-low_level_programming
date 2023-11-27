@@ -6,14 +6,14 @@ void file_close(int fc);
  * @fc : file descriptor to be closed
  * Return: nothing
 */
-void file_close(int fc)
+void file_close(int fd)
 {
 	int i;
 
-	i = close(fc);
-	if (i < 0)
+	i = close(fd);
+	if (i == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fc %d\n", fc);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
