@@ -19,12 +19,12 @@ int create_file(const char *filename, char *text_content)
 		{
 			len++;
 		}
+	}
 	open_int = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	write_bts = write(open_int, text_content, len);
 	if (open_int < 0 || write_bts < 0)
-	{
 		return (-1);
-	}
+
 	close(open_int);
 
 	return (1);
