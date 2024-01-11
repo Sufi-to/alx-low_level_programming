@@ -1,4 +1,4 @@
-#include "d_linked.h"
+#include "lists.h"
 
 /**
  * print_dlistint - prints all the elements in dlistint_t list
