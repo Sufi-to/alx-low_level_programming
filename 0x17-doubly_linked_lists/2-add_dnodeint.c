@@ -4,7 +4,7 @@
  * add_dnodeint - adds a new add at the beginning of the list
  * @head: double pointer to the head of the list
  * @n: int data for the new node
- * Returns: address of the new node
+ * Return: address of the new node
 */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
@@ -20,7 +20,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	if (nl != NULL)
 	{
 		while (nl->prev != NULL)
-		 nl = nl->prev;
+		nl = nl->prev;
 	}
 	new->next = nl;
 	if (nl)
